@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>El Pato Rojo</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>El Pato Rojo</h1>
+            <p>¡Bienvenidos al mejor bar de tapas de la ciudad!</p>
+            <img src="./assets/logo.webp" alt="Logo de El Pato Rojo" class="logo" />
+        </header>
+
+        <!-- Menú -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección Principal -->
+        <section id="inicio">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                ¡Bienvenido a nuestro restaurante, donde la pasión por la comida se combina con la calidez del servicio para crear una experiencia gastronómica inolvidable! Nos enorgullecemos en
+                ofrecer una selección exquisita de platos que satisfarán los paladares más exigentes. Nuestra cocina está llena de sabores auténticos y creativos, preparados con ingredientes frescos y
+                de la más alta calidad. Desde nuestros deliciosos entrantes hasta nuestros postres tentadores, cada bocado es una obra maestra que te dejará con ganas de más. Nuestro equipo de chefs
+                apasionados trabaja árduamente para crear una experiencia culinaria única y memorables. Además de nuestra deliciosa comida, también nos esforzamos por proporcionar un servicio
+                excepcional. Nuestro personal amable y atento está aquí para asegurarse de que tu visita sea agradable y sin preocupaciones. Ya sea que estés celebrando una ocasión especial,
+                disfrutando de una cena romántica o simplemente relajándote con amigos, estamos aquí para hacer que tu experiencia sea inolvidable. ¡Esperamos verte pronto en nuestro restaurante y
+                deleitarte con nuestra exquisita comida y servicio excepcional!
+            </p>
+        </section>
+
+        <!-- Sección Menú -->
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+            <div class="platos">
+                <!-- Platos -->
+                <div class="plato">
+                    <img class="imagen" src="./assets/tapas.png" alt="Imagen de tapas" />
+                    <h3>Tapas Variadas</h3>
+                    <p>Las mejores tapas de la región</p>
+                </div>
+                <div class="plato">
+                    <img class="imagen" src="./assets/platos_combinados.png" alt="Imagen de platos combinados" />
+                    <h3>Platos combinados</h3>
+                    <p>Un clásico que no te puedes perder</p>
+                </div>
+                <div class="plato">
+                    <img class="imagen" src="./assets/tortilla_patata.png" alt="Imagen de tortilla" />
+                    <h3>Tortilla Española</h3>
+                    <p>Un sabor único que te encantará</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reservas -->
+        <section id="reservas">
+            <h2>Haz tu Reserva</h2>
+            <form id="formularioReserva" onsubmit="return validarFormulario()">
+                <label for="nombreUsuario">Nombre de Usuario</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required />
+
+                <label for="correoUsuario">Correo Electrónico</label>
+                <input type="email" id="correoUsuario" name="correoUsuario" placeholder="usuario@gmail.com" required />
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 1824-2024 El Pato Rojo - Todos los derechos reservados</p>
+        </footer>
+
+        <script>
+            function validarFormulario() {
+                const correo = document.getElementById("correoUsuario").value;
+                const patron = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+                if (!patron.test(correo)) {
+                    alert("Por favor, ingresa un correo de Gmail o Outlook.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
