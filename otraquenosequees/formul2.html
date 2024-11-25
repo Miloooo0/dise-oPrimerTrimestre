@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Gatocuestionario</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Milad Al Chihabi" />
+        <meta name="description" content="Cuestionario dos para aquellos amantes de los gatos y las galletas" />
+        <meta name="keywords" content="Gatos, galletas, cuestionario, gusto, opinion" />
+        <link rel="icon" href="./assets/logo.png" />
+        <link rel="stylesheet" href="./styles/styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="circle"></div>
+            <h1>GATOLLETAS</h1>
+        </header>
+        <section id="formulario">
+            <h1 class="titulo">GALLETAFORMULARIO</h1>
+            <form action="formularioGracias.html" method="post">
+                <fieldset>
+                    <h2>¿Qué tipo de galletas te gustan?</h2>
+                    <!-- Pregunta i: Respuesta con un máximo de 20 caracteres -->
+                    <label for="palabra">¿Cuál es tu palabra favorita para describir las galletas?</label>
+                    <input type="text" id="palabra" name="palabra" maxlength="20" required />
+
+                    <!-- Pregunta ii: Selección múltiple con checkboxes -->
+                    <fieldset>
+                        <legend>¿Qué ingredientes te gustan en tus galletas?</legend>
+                        <input type="checkbox" id="chocolate" name="ingredientes[]" value="chocolate" />
+                        <label for="chocolate">Chocolate</label>
+
+                        <input type="checkbox" id="nueces" name="ingredientes[]" value="nueces" />
+                        <label for="nueces">Nueces</label>
+
+                        <input type="checkbox" id="avena" name="ingredientes[]" value="avena" />
+                        <label for="avena">Avena</label>
+                    </fieldset>
+
+                    <!-- Pregunta iii: Selección única con botones de radio -->
+                    <fieldset>
+                        <legend>¿Cuál es tu forma favorita de galleta?</legend>
+                        <input type="radio" id="redonda" name="forma" value="redonda" />
+                        <label for="redonda">Redonda</label>
+
+                        <input type="radio" id="cuadrada" name="forma" value="cuadrada" />
+                        <label for="cuadrada">Cuadrada</label>
+
+                        <input type="radio" id="corazon" name="forma" value="corazon" />
+                        <label for="corazon">Corazón</label>
+                    </fieldset>
+
+                    <!-- Pregunta iv: Valor numérico -->
+                    <label for="cantidad">¿Cuántas galletas puedes comer en una sentada?</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" required />
+
+                    <!-- Pregunta v: Selección única con un desplegable -->
+                    <label for="sabor">¿Cuál es tu sabor favorito de galleta?</label>
+                    <select id="sabor" name="sabor" required>
+                        <option value="vainilla">Vainilla</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="canela">Canela</option>
+                    </select>
+                </fieldset>
+                <br />
+
+                <input type="submit" value="Enviar" />
+                <button type="button" onclick="limpiarFormulario()">Limpiar formulario</button>
+                <a href="index.html" class="home-button"></a>
+            </form>
+            <script>
+                function limpiarFormulario() {
+                    document.querySelector("form").reset();
+                }
+            </script>
+        </section>
+        <footer>
+            <p>Gatolletas - Gatitos y Galletas &copy; 2023 - <a href="mapaweb.html">Mapa Web</a> - Contacto arriba pestaña de contacto</p>
+        </footer>
+    </body>
+</html>

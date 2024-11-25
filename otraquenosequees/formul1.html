@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Gatocuestionario</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Milad Al Chihabi" />
+        <meta name="description" content="Cuestionario para aquellos amantes de los gatos y las galletas" />
+        <meta name="keywords" content="Gatos, galletas, cuestionario, gusto, opinion" />
+        <link rel="icon" href="./assets/logo.png" />
+        <link rel="stylesheet" href="./styles/styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="circle"></div>
+            <h1>GATOLLETAS</h1>
+        </header>
+        <section id="formulario">
+            <h1 class="titulo">GATOFORMULARIO</h1>
+            <form action="formularioGracias.html" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="50" />
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="100" />
+
+                    <label for="edad">E-Mail:</label>
+                    <input type="email" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preguntas</legend>
+                    <p>Dinos que cosas de las siguientes te gustan:</p>
+                    <input type="checkbox" name="conocimientos" value="gatos" /> Gatos <input type="checkbox" name="conocimientos" value="dibujos" /> Dibujos de gatos
+                    <input type="checkbox" name="conocimientos" value="forma" /> Cosas en forma de gato <input type="checkbox" name="conocimientos" value="orejitas" /> Cosas en forma de orejitas de
+                    gato
+
+                    <p>Elige tu color de gatito favorito:</p>
+                    <input type="radio" name="gato" value="naranja" /> Naranja <input type="radio" name="gato" value="gris" /> Gris <input type="radio" name="gato" value="blanco" /> Blanco
+                    <input type="radio" name="gato" value="negro" /> Negro <input type="radio" name="gato" value="atigrado" /> Atigrado <input type="radio" name="gato" value="marron" /> Marrón
+                    <input type="radio" name="gato" value="rayado" /> Rayado <input type="radio" name="gato" value="calico" /> Calico <input type="radio" name="gato" value="siames" /> Siames
+                    <input type="radio" name="gato" value="blanco-negro" /> Blanco y Negro <input type="radio" name="gato" value="amarillo" /> Amarillo
+                    <input type="radio" name="gato" value="tricolor" /> Tricolor <input type="radio" name="gato" value="todo" /> Absolutamente todo tipo de gatito (esta)
+
+                    <p>¿Cuánto crees que sabes de gatos?:</p>
+                    <select name="nivel">
+                        <option value="nivel0">Nada, soy un nuevo amante de gatos</option>
+                        <option value="nivel1">Poco, estoy aún un poco verde</option>
+                        <option value="nivel2">Ya he tenido gatito y me ha ido bien</option>
+                        <option value="nivel3">Amante nato de los gatos</option>
+                    </select>
+
+                    <p>Elige tu color favorito para un collar de gatito personalizable:</p>
+                    <input type="color" name="color" />
+
+                    <p>Elige la fecha en la que te gustaría tener un gatito:</p>
+                    <input type="date" name="fecha" />
+
+                    <p>Sube una foto de un gatito que te haya podido parecer adorable:</p>
+                    <input type="file" name="archivo" />
+
+                    <p>Valora, a través de una barra móvil el nivel de ternura de Gatolletas y tu grado de satisfacción:</p>
+                    <input type="range" name="valoracion" min="0" max="10" />
+                </fieldset>
+                <br />
+
+                <input type="submit" value="Enviar" />
+                <button type="button" onclick="limpiarFormulario()">Limpiar formulario</button>
+                <a href="index.html" class="home-button"></a>
+            </form>
+            <script>
+                function limpiarFormulario() {
+                    document.querySelector("form").reset();
+                }
+            </script>
+        </section>
+        <footer>
+            <p>Gatolletas - Gatitos y Galletas &copy; 2023 - <a href="mapaweb.html">Mapa Web</a> - Contacto arriba pestaña de contacto</p>
+        </footer>
+    </body>
+</html>
